@@ -1,0 +1,38 @@
+:root {
+  /* Container */
+  --container-max-width: 1200px;
+  --container-padding: 1.5rem;
+
+  /* Colors (apne hisaab se change karna) */
+  --color-bg: #ffffff;
+  --color-bg-dark: #0a0a0a;
+  --color-text: #111111;
+  --color-text-light: #666666;
+  --color-accent: #000000;
+
+  /* Typography */
+  --font-heading: "Your Heading Font", sans-serif;
+  --font-body: "Your Body Font", sans-serif;
+
+  /* Spacing scale */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 8rem;
+
+  /* Transitions */
+  --transition-base: 0.3s ease;
+
+  /* Z-index layers */
+  --z-progress-bar: 100;
+  --z-page-number: 90;
+  --z-overlay: 50;
+}
+
+/* Responsive container padding */
+@media (max-width: 768px) {
+  :root {
+    --container-padding: 1rem;
+  }
+}

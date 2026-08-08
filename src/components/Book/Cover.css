@@ -1,0 +1,60 @@
+.cover {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cover__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+
+.cover__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.6)
+  );
+  z-index: -1;
+}
+
+.cover__content {
+  text-align: center;
+  color: #fff;
+}
+
+.cover__title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 6vw, 4rem);
+  margin-bottom: var(--space-sm);
+}
+
+.cover__author {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  margin-bottom: var(--space-lg);
+}
+
+.cover__cta {
+  padding: var(--space-xs) var(--space-md);
+  background: #fff;
+  color: #000;
+  border: none;
+  border-radius: 999px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform var(--transition-base);
+}
+
+.cover__cta:hover {
+  transform: scale(1.05);
+}

@@ -1,0 +1,31 @@
+.chapter-intro {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--color-bg);
+}
+
+.chapter-intro__number {
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+  margin-bottom: var(--space-md);
+}
+
+.chapter-intro__heading {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 6vw, 3.75rem);
+  line-height: 1.1;
+  max-width: 20ch;
+  margin: 0 auto var(--space-sm);
+}
+
+.chapter-intro__subheading {
+  font-size: 1.15rem;
+  color: var(--color-text-light);
+  max-width: 40ch;
+  margin: 0 auto;
+}

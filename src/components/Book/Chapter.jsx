@@ -1,24 +1,16 @@
-import Container from "../Layout/Container";
+import { forwardRef } from "react";
+import ChapterIntro from "./ChapterIntro";
 import "./Chapter.css";
 
-const Chapter = ({ chapter, children }) => {
-  const { title, intro } = chapter;
-
+const Chapter = forwardRef(({ chapter, index, children }, ref) => {
   return (
-    <section className="chapter">
-      <div className="chapter__intro">
-        <Container>
-          <h2 className="chapter__heading">{intro?.heading || title}</h2>
-          {intro?.subheading && (
-            <p className="chapter__subheading">{intro.subheading}</p>
-          )}
-        </Container>
-      </div>
-
-      {/* HorizontalSection with StoryPages goes here */}
+    <section className="chapter" id={chapter.id} ref={ref} data-chapter-id={chapter.id}>
+      <ChapterIntro chapter={chapter} index={index} />
       <div className="chapter__body">{children}</div>
     </section>
   );
-};
+});
+
+Chapter.displayName = "Chapter";
 
 export default Chapter;

@@ -1,0 +1,39 @@
+.statement-comparison {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-md);
+  width: 100%;
+  max-width: 72ch;
+}
+
+.statement-comparison__card {
+  border-top: 2px solid var(--color-accent);
+  padding-top: 0.8rem;
+}
+
+.statement-comparison__title {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.2em;
+}
+
+.statement-comparison__subtitle {
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+  margin-bottom: 0.6em;
+}
+
+.statement-comparison__description {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--color-text-light);
+}
+
+@media (max-width: 768px) {
+  .statement-comparison {
+    grid-template-columns: 1fr;
+  }
+}

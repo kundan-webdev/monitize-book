@@ -4,19 +4,42 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 1px solid blue;
 }
 
-html, body {
+html,
+body {
   width: 100%;
-  height: 100%;
-  /*overflow-x: hidden;*/
+  min-height: 100%;
+  overflow-x: hidden;
   font-family: var(--font-body);
   background: var(--color-bg);
   color: var(--color-text);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  overscroll-behavior-y: none;
+}
+
 #root {
   width: 100%;
-  /*min-height: 100vh;*/
+  min-height: 100%;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font-family: inherit;
 }

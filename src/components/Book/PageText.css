@@ -1,0 +1,21 @@
+.page-text__heading {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3.4vw, 2.4rem);
+  font-weight: 600;
+  line-height: 1.15;
+  margin-bottom: var(--space-sm);
+}
+
+.page-text__body {
+  max-width: 46ch;
+}
+
+.page-text__paragraph {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-text-light);
+}
+
+.page-text__paragraph + .page-text__paragraph {
+  margin-top: 1em;
+}

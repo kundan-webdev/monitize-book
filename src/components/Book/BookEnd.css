@@ -1,0 +1,46 @@
+.book-end {
+  width: 100vw;
+  min-width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-dark);
+  color: #fff;
+}
+
+.book-end__container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .book-end {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    min-height: 100vh;
+  }
+}
+
+.book-end__content {
+  max-width: 40ch;
+  text-align: center;
+}
+
+.book-end__content .page-text__heading,
+.book-end__content .page-text__paragraph {
+  color: #fff;
+}
+
+.book-end__content .page-text__body {
+  margin: 0 auto var(--space-lg);
+}
+
+.book-end__content .page-meta__credits-tagline,
+.book-end__content .page-meta__credits-author {
+  color: rgba(255, 255, 255, 0.65);
+}

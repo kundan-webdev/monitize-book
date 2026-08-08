@@ -1,0 +1,23 @@
+.dialogue {
+  margin: var(--space-md) 0 0;
+  padding-left: var(--space-sm);
+  border-left: 2px solid var(--color-accent);
+  max-width: 46ch;
+}
+
+.dialogue__speaker {
+  display: block;
+  font-style: normal;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+  margin-bottom: 0.4em;
+}
+
+.dialogue__text {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  font-style: italic;
+}

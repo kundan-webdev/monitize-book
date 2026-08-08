@@ -1,0 +1,50 @@
+.financial-table {
+  width: 100%;
+  max-width: 56ch;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+
+.financial-table th,
+.financial-table td {
+  text-align: left;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #e4e2dd;
+  font-weight: 400;
+}
+
+.financial-table__section th {
+  padding-top: 1.2rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+  border-bottom: none;
+}
+
+.financial-table__label {
+  color: var(--color-text);
+}
+
+.financial-table__label--indent {
+  padding-left: 1rem;
+  color: var(--color-text-light);
+}
+
+.financial-table__description {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+}
+
+.financial-table__value {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.financial-table__row--emphasis th,
+.financial-table__row--emphasis td {
+  font-weight: 700;
+  border-top: 2px solid var(--color-accent);
+  border-bottom: 2px solid var(--color-accent);
+}

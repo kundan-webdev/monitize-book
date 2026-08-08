@@ -10,3 +10,18 @@
   height: 100%;
   width: max-content;
 }
+
+/* Mobile: no pin, no horizontal scrub — pages stack vertically instead. */
+@media (max-width: 768px) {
+  .horizontal-section {
+    height: auto;
+    overflow: visible;
+  }
+
+  .horizontal-section__track {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+}

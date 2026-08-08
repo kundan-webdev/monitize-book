@@ -1,0 +1,30 @@
+.waterfall {
+  list-style: none;
+  width: 100%;
+  max-width: 44ch;
+}
+
+.waterfall__step {
+  display: grid;
+  grid-template-columns: 1.5rem 1fr auto;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid #e4e2dd;
+}
+
+.waterfall__operator {
+  font-family: var(--font-heading);
+  color: var(--color-text-light);
+}
+
+.waterfall__label {
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+}
+
+.waterfall__value {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  white-space: nowrap;
+}

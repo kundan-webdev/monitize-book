@@ -1,0 +1,59 @@
+.expense-buckets {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-md);
+  width: 100%;
+  max-width: 64ch;
+}
+
+.expense-buckets__title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.expense-buckets__title span {
+  color: var(--color-text-light);
+  font-weight: 400;
+  margin-right: 0.4rem;
+}
+
+.expense-buckets__items {
+  list-style: none;
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+}
+
+.expense-buckets__items li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.2rem 0;
+}
+
+.expense-buckets__total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  margin-top: 0.4rem;
+  padding-top: 0.4rem;
+  border-top: 1px solid #e4e2dd;
+}
+
+.expense-buckets__grand-total {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-top: 2px solid var(--color-accent);
+  padding-top: 0.6rem;
+  margin-top: 0.4rem;
+}
+
+@media (max-width: 768px) {
+  .expense-buckets {
+    grid-template-columns: 1fr;
+  }
+}

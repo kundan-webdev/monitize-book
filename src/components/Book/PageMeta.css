@@ -1,0 +1,132 @@
+.page-meta__tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+  margin-bottom: var(--space-xs);
+}
+
+.page-meta__numeral {
+  margin-bottom: var(--space-xs);
+}
+
+.page-meta__numeral-value {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--color-text-light);
+}
+
+.page-meta__buckets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  max-width: 46ch;
+}
+
+.page-meta__buckets-item {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+  border-top: 1px solid #e4e2dd;
+  padding-top: var(--space-xs);
+}
+
+.page-meta__buckets-number {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--color-text-light);
+}
+
+.page-meta__buckets-title {
+  font-size: 1.1rem;
+}
+
+.page-meta__calculation {
+  margin-top: var(--space-md);
+  padding: var(--space-sm) 0;
+  border-top: 1px solid #e4e2dd;
+  border-bottom: 1px solid #e4e2dd;
+  max-width: 40ch;
+}
+
+.page-meta__calculation-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+  margin-bottom: 0.4em;
+}
+
+.page-meta__calculation-formula {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.page-meta__checklist {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  border: 1px solid var(--color-accent);
+  font-size: 0.85rem;
+  margin-bottom: var(--space-xs);
+}
+
+.page-meta__next-book {
+  margin-top: var(--space-sm);
+  max-width: 46ch;
+}
+
+.page-meta__next-book-kicker {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+  margin-bottom: var(--space-xs);
+}
+
+.page-meta__next-book-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  margin-bottom: 0.3em;
+}
+
+.page-meta__next-book-subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text-light);
+  margin-bottom: 0.6em;
+}
+
+.page-meta__next-book-teaser {
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.page-meta__credits {
+  text-align: center;
+}
+
+.page-meta__credits-publisher {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5em;
+}
+
+.page-meta__credits-tagline {
+  color: var(--color-text-light);
+  margin-bottom: 0.3em;
+}
+
+.page-meta__credits-author {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+}

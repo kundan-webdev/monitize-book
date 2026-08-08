@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { resolveAssetPath } from "../../utils/helpers";
 import "./PageImage.css";
 
 // When a local image is missing/broken, borrow a themed placeholder from
@@ -8,9 +9,11 @@ const getFallbackSrc = (seed) =>
   `https://picsum.photos/seed/${encodeURIComponent(seed || "book-page")}/900/1125`;
 
 const PageImage = ({ src, alt = "", className = "", priority = false, ...rest }) => {
+  const resolvedSrc = resolveAssetPath(src);
+
   const [state, setState] = useState({
     forSrc: src,
-    currentSrc: src,
+    currentSrc: resolvedSrc,
     usedFallback: false,
     exhausted: false,
   });
@@ -18,7 +21,7 @@ const PageImage = ({ src, alt = "", className = "", priority = false, ...rest })
   // Reset fallback state when the src prop itself changes, without an
   // effect: compare-during-render is React's documented pattern for this.
   if (state.forSrc !== src) {
-    setState({ forSrc: src, currentSrc: src, usedFallback: false, exhausted: false });
+    setState({ forSrc: src, currentSrc: resolvedSrc, usedFallback: false, exhausted: false });
   }
 
   const handleError = () => {

@@ -1,5 +1,6 @@
 import book from "../../data/book";
 import Container from "../Layout/Container";
+import { resolveAssetPath } from "../../utils/helpers";
 import "./Cover.css";
 
 const Cover = () => {
@@ -9,7 +10,11 @@ const Cover = () => {
     <section className="cover">
       <div
         className="cover__bg"
-        style={coverImage ? { backgroundImage: `url(${coverImage})` } : undefined}
+        style={
+          coverImage
+            ? { backgroundImage: `url(${resolveAssetPath(coverImage)})` }
+            : undefined
+        }
       />
       <div className="cover__overlay" />
 

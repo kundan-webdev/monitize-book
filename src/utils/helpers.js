@@ -56,3 +56,15 @@ export const splitParagraphs = (text) =>
     .filter(Boolean);
 
 export const padNumber = (n, width = 2) => String(n).padStart(width, "0");
+
+// book.js stores image paths as root-absolute ("/images/chapter1/1.png").
+// That only resolves correctly when the site is served from domain root.
+// On GitHub Pages this app is served from a repo subpath
+// (/monitize-book/...), so root-absolute paths must be re-anchored under
+// Vite's BASE_URL. External URLs (e.g. the Picsum placeholder fallback)
+// are left untouched.
+export const resolveAssetPath = (path) => {
+  if (!path || /^([a-z][a-z0-9+.-]*:)?\/\//i.test(path)) return path;
+  const base = import.meta.env.BASE_URL || "/";
+  return path.startsWith("/") ? `${base}${path.slice(1)}` : `${base}${path}`;
+};

@@ -8,11 +8,15 @@ import StoryPage from "./StoryPage";
 import BookEnd from "./BookEnd";
 import ProgressBar from "../Common/ProgressBar";
 import PageNumber from "../Common/PageNumber";
+import TopBar from "../Common/TopBar";
+import useImagePreloader from "../../hooks/useImagePreloader";
 import "./Book.css";
 
 const Book = () => {
   const chapterRefs = useRef([]);
   const [activeChapter, setActiveChapter] = useState(0);
+
+  useImagePreloader(book, activeChapter);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -32,6 +36,7 @@ const Book = () => {
 
   return (
     <div className="book">
+      <TopBar activeChapter={activeChapter} />
       <Cover />
       <Timeline />
 

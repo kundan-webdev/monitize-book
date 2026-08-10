@@ -27,7 +27,7 @@ const getTopics = (chapter) => {
 };
 
 const Timeline = () => (
-  <section className="timeline" aria-label="Table of contents">
+  <section id="contents" className="timeline" aria-label="Table of contents">
     <Container>
       <p className="timeline__kicker">Contents</p>
 

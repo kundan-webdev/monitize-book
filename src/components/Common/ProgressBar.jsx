@@ -16,8 +16,9 @@ const ProgressBar = () => {
       const doc = document.documentElement;
       const scrollable = doc.scrollHeight - doc.clientHeight;
       const progress = scrollable > 0 ? window.scrollY / scrollable : 0;
+      const clamped = Math.min(1, Math.max(0, progress));
       if (fillRef.current) {
-        fillRef.current.style.transform = `scaleX(${Math.min(1, Math.max(0, progress))})`;
+        fillRef.current.style.transform = `scaleX(${clamped})`;
       }
     };
 

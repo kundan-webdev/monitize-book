@@ -25,9 +25,13 @@
   --transition-base: 0.3s ease;
 
   /* Z-index layers */
+  --z-topbar: 110;
   --z-progress-bar: 100;
   --z-page-number: 90;
   --z-overlay: 50;
+
+  /* Top bar */
+  --topbar-height: 2.25rem;
 }
 
 /* Responsive container padding */
